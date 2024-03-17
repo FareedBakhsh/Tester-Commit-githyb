@@ -1,0 +1,29 @@
+/* CSS for Hover Underline Effect */
+
+/* Apply to all anchor (link) elements */
+a {
+    position: relative;
+    text-decoration: none;
+    color: #333; /* default link color */
+  }
+  
+  /* Create the underline effect */
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* adjust the thickness of the underline as needed */
+    bottom: 0;
+    left: 0;
+    background-color: #007bff; /* underline color */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover effect: reveal the underline */
+  a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
